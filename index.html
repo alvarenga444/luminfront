@@ -39,6 +39,7 @@
     .logo-mark svg { position: relative; z-index: 1; }
     .logo-text { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
     .logo-text span { color: var(--orange); }
+    .logo-img { height: 36px; width: auto; display: block; }
     .nav-links { display: flex; gap: 36px; }
     .nav-links a { font-size: 14px; color: var(--ink-2); font-weight: 500; transition: color .15s; }
     .nav-links a:hover { color: var(--ink); }
@@ -225,8 +226,8 @@
       return (
         <nav className="nav">
           <div className="container nav-inner">
-            <a href="#" className="logo">
-              <div className="logo-text">Lumin<span>.</span></div>
+            <a href="#" className="logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+              <img src="logo.png" alt="Lumin Engenharia" className="logo-img" />
             </a>
             <div className="nav-links">
               <a href="#services">Serviços</a>
@@ -481,9 +482,9 @@
           <div className="container">
             <div className="foot-grid">
               <div className="foot-brand">
-                <div className="logo">
-                  <div className="logo-text">Lumin<span>.</span></div>
-                </div>
+                <a href="#" className="logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+                  <img src="logo.png" alt="Lumin Engenharia" className="logo-img" />
+                </a>
                 <p>Lumin Instalações Elétricas LTDA · Projetos e instalações elétricas, SPDA e hidráulica predial desde 2010.</p>
               </div>
               <div className="foot-col">
